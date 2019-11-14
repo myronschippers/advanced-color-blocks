@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script>
+    <script src="scripts/client.js" type="text/javascript"></script>
+
+    <title>Color Blocks, Advanced</title>
+</head>
+<body>
+    <div class="appBar">
+        <div class="appBar-identity">
+            <h1 class="primeHdg">Color Blocks</h1>
+        </div>
+        <div class="appBar-tools">
+            <div>
+                <button>Add Red</button>
+                <button>Add Blue</button>
+                <button>Add Green</button>
+                <button>Add Yellow</button>
+            </div>
+            <div>
+                <span>Layout: </span>
+                <label>
+                    <input
+                        class="js-field-layout"
+                        type="radio"
+                        name="layout"
+                        value="auto"
+                        checked
+                    >
+                    <span>Auto</span>
+                </label>
+                <label>
+                    <input
+                        class="js-field-layout"
+                        type="radio"
+                        name="layout"
+                        value="1"
+                        checked
+                    >
+                    <span>One Across</span>
+                </label>
+                <label>
+                    <input
+                        class="js-field-layout"
+                        type="radio"
+                        name="layout"
+                        value="2"
+                        checked
+                    >
+                    <span>Two Across</span>
+                </label>
+                <label>
+                    <input
+                        class="js-field-layout"
+                        type="radio"
+                        name="layout"
+                        value="3"
+                        checked
+                    >
+                    <span>Three Across</span>
+                </label>
+                <label>
+                    <input
+                        class="js-field-layout"
+                        type="radio"
+                        name="layout"
+                        value="4"
+                        checked
+                    >
+                    <span>Four Across</span>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Color Wall</h2>
+
+        <ul class="blocks js-swatches">
+        </ul>
+    </div>
+    
+</body>
+</html>
