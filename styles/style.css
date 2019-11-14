@@ -48,6 +48,7 @@ Blocks
     display: inline-block;
     box-sizing: border-box;
     padding: 0 5px 5px;
+    font-size: 1rem;
 }
 
 .blocks_1up {
@@ -98,6 +99,15 @@ Color Card
     width: 100%;
     padding: 8px 8px 10px;
     border-radius: 3px;
+}
+
+.colorCard h1,
+.colorCard h2,
+.colorCard h3,
+.colorCard h4,
+.colorCard h5,
+.colorCard h6 {
+    margin: 0;
 }
 
 .colorCard-swatch {
