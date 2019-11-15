@@ -11,7 +11,7 @@ Button
 
 .btn {
     display: inline-block;
-    padding: 6px;
+    padding: 6px 10px;
     margin: 0;
     font-size: 1.0rem;
     border-radius: 3px;
@@ -19,6 +19,25 @@ Button
     border: 1px solid #4C5270;
     background: #ffffff;
     color: #4C5270;
+    text-align: center;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+.btn_tool {
+    background: rgb(161, 179, 214);
+    color: rgb(41, 49, 65);
+    border-color: rgb(41, 49, 65);
+    font-size: 0.8rem;
+}
+
+.btn_tool:hover {
+    background: rgb(41, 49, 65);
+    color: rgb(161, 179, 214);
+    border-color: rgb(161, 179, 214);
+    font-size: 0.8rem;
 }
 
 /* ----------------------------------------------------------------------
@@ -77,6 +96,7 @@ App Bar
     color: rgb(161, 179, 214);
     text-align: center;
     overflow: hidden;
+    border-bottom: 1px solid #ffffff;
 }
 
 .appBar-identity {
@@ -88,6 +108,119 @@ App Bar
     padding: 16px 18px;
     margin-top: 15px;
     background: rgb(65, 78, 104);
+    box-shadow: 0 -1px 8px rgba(0,0,0,0.2), inset 0 -2px 0 rgba(0,0,0,0.2);
+    border-top: 1px solid rgba(0,0,0,0.4);
+}
+
+.appBar-tools > *:first-child,
+.appBar-tools > *:last-child {
+    display: inline-block;
+    width: 48%;
+    vertical-align: middle;
+}
+
+.appBar-tools > *:first-child {
+    text-align: left;
+}
+
+.appBar-tools > *:last-child {
+    text-align: right;
+}
+
+.appBar-tools > * > * {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/*
+-- ICON RADIO
+----------------------- */
+
+.iconRadio {
+    display: inline-block;
+    position: relative;
+    margin-left: 6px;
+    cursor: pointer;
+}
+
+.iconRadio-label {
+    display: inline-block;
+    font-size: 0;
+}
+
+.iconRadio-field {
+    visibility: hidden;
+    position: absolute;
+    width: 0;
+    height: 0;
+    margin: 0;
+}
+
+
+/*
+-- LAYOUT ICONS
+----------------------- */
+
+.layout {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    box-sizing: border-box;
+    color: rgb(41, 49, 65);
+    font-size: 0;
+}
+
+.layout_auto {
+    text-align: center;
+}
+
+.layout > * {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 1px;
+    font-size: 0;
+    line-height: 0;
+}
+
+.layout_one > * {
+    width: 100%;
+}
+
+.layout_two > * {
+    width: 50%;
+}
+
+.layout_three > * {
+    width: 33.33333%;
+}
+
+.layout_four > * {
+    width: 25%;
+}
+
+.layout_auto > *:nth-child(odd) {
+    width: 75%;
+}
+
+.layout_auto > *:nth-child(even) {
+    width: 25%;
+    border-radius: 100%;
+}
+
+.layout > *:before {
+    content: "";
+    display: block;
+    width: 100%;
+    padding-bottom: 100%;
+    background-color: rgb(161, 179, 214);
+}
+
+.layout_auto > *:before {
+    padding-bottom: 8px;
+}
+
+.iconRadio-field:checked + .iconRadio-label .layout > *:before {
+    background-color: rgb(209, 224, 255);
 }
 
 /* ----------------------------------------------------------------------
