@@ -66,23 +66,24 @@ Blocks
 .blocks > * {
     display: inline-block;
     box-sizing: border-box;
-    padding: 0 5px 5px;
+    padding: 0 5px 10px;
     font-size: 1rem;
+    min-width: 170px;
 }
 
-.blocks_1up {
+.blocks_1up > * {
     width: 100%;
 }
 
-.blocks_2up {
+.blocks_2up > * {
     width: 50%;
 }
 
-.blocks_3up {
+.blocks_3up > * {
     width: 33.3333%;
 }
 
-.blocks_4up {
+.blocks_4up > * {
     width: 25%;
 }
 
@@ -230,8 +231,14 @@ Color Card
 .colorCard {
     box-sizing: border-box;
     width: 100%;
+    min-width: 160px;
     padding: 8px 8px 10px;
     border-radius: 3px;
+    background: #ffffff;
+    border: 1px solid rgb(0,0,0,0.23);
+    border-width: 0 1px 1px 1px;
+    box-shadow: 0 1px 3px rgb(0,0,0,0.1);
+    font-size: 0;
 }
 
 .colorCard h1,
@@ -241,14 +248,16 @@ Color Card
 .colorCard h5,
 .colorCard h6 {
     margin: 0;
+    font-size: 0.9;
 }
 
 .colorCard-swatch {
     width: 100%;
-    max-height: 100px;
+    max-height: 140px;
     padding-bottom: 60%;
     margin-bottom: 5px;
     box-sizing: border-box;
+    border: 1px solid rgb(0,0,0,0.3);
     display: block;
 }
 
@@ -268,9 +277,19 @@ Color Card
     background: yellow;
 }
 
-.colorCard-bd {
-    height: 80px;
+.colorCard-label,
+.colorCard-action {
+    display: inline-block;
+    width: 50%;
     font-size: 0.8rem;
+}
+
+.colorCard-label {
+    text-align: left;
+}
+
+.colorCard-action {
+    text-align: right;
 }
 
 /* ----------------------------------------------------------------------
