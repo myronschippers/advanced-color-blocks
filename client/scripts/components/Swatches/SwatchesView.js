@@ -21,19 +21,20 @@ class SwatchesView {
     }
 
     _createHandlers() {
-        this._$fieldLayout = $('.js-field-layout').on('change', this._controller.onChangeLayout);
+        this._$fieldLayout = $('.js-field-layout').on('change', this._onChangeLayout.bind(this));
     }
 
     //
     // EVENT HANDLERS
     // ------------------------------
 
-    changeLayout(layout) {
+    _onChangeLayout(event) {
+        const layoutValue = event.target.value;
         let styling = 'blocks js-swatches-wall';
-        console.log('view layout: ', layout);
+        console.log('view layout: ', layoutValue);
 
-        if (layout !== 'auto') {
-            styling += ` blocks_${layout}up`;
+        if (layoutValue !== 'auto') {
+            styling += ` blocks_${layoutValue}up`;
         }
 
         this._$swatchesContr.attr('class', styling);
