@@ -1,3 +1,5 @@
+import SwatchesView from './SwatchesView.js';
+
 class SwatchesController {
     constructor() {
         this._init();
@@ -8,11 +10,13 @@ class SwatchesController {
     // ------------------------------
 
     _init() {
-        this._createEventHandlers();
+        this._bindEventHandlers();
+        console.log('initialized SwatchesController');
+        this._view = new SwatchesView(this);
     }
 
-    _createEventHandlers() {
-        $('.js-field-layout').on('change', this._onChangeLayout.bind(this));
+    _bindEventHandlers() {
+        this.onChangeLayout = this._onChangeLayout.bind(this);
     }
 
     //
@@ -21,7 +25,7 @@ class SwatchesController {
 
     _onChangeLayout(event) {
         const layoutValue = event.target.value;
-        console.log('change layout: ', layoutValue);
+        this._view.changeLayout(layoutValue);
     }
 }
 
