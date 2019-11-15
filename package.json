@@ -1,0 +1,15 @@
+{
+  "name": "color-blocks-advanced",
+  "version": "1.0.0",
+  "description": "We will be building up an application that creates Color Blocks on the DOM based off of buttons that are loaded right away. Additionally, we are going to be tracking the number of Blocks in each color we create. When the user clicks on a color button, it will create a Color Block, then add to that colors count.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Myron Schippers",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
