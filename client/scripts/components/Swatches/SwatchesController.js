@@ -11,7 +11,6 @@ class SwatchesController {
     // ------------------------------
 
     _init() {
-        console.log('initialized SwatchesController');
         this._view = new SwatchesView(this);
         this._model = new SwatchesModel();
     }

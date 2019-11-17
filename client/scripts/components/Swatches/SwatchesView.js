@@ -11,7 +11,6 @@ class SwatchesView {
 
     _init() {
         this._enable();
-        console.log('initialized SwatchesView');
     }
 
     _enable() {
@@ -28,7 +27,6 @@ class SwatchesView {
 
     _render() {
         const swatchList = this._controller.swatches;
-        console.log('swatchList: ', swatchList);
 
         this._$swatchesContr.empty();
         for (let i = 0; i < swatchList.length; i++) {
@@ -57,7 +55,6 @@ class SwatchesView {
     _onChangeLayout(event) {
         const layoutValue = event.target.value;
         let styling = 'blocks js-swatches-wall';
-        console.log('view layout: ', layoutValue);
 
         if (layoutValue !== 'auto') {
             styling += ` blocks_${layoutValue}up`;
