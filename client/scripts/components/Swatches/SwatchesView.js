@@ -23,6 +23,7 @@ class SwatchesView {
     _createHandlers() {
         this._$fieldLayout = $('.js-field-layout').on('change', this._onChangeLayout.bind(this));
         this._$addSwatchBtns = $('.js-btn-add-swatch').on('click', this._onClickAddSwatch.bind(this));
+        this._$delete = this._$swatchesContr.on('click', '.js-color-card-delete', this._onClickDeleteSwatch.bind(this));
     }
 
     _render() {
@@ -68,6 +69,12 @@ class SwatchesView {
     _onClickAddSwatch(event) {
         const newColor = event.target.dataset.color;
         this._controller.addSwatch(newColor);
+        this._render();
+    }
+
+    _onClickDeleteSwatch(event) {
+        const swatchId = event.target.dataset.swatchId;
+        this._controller.deleteSwatch(swatchId);
         this._render();
     }
 }
