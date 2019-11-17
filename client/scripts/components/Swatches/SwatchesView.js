@@ -11,6 +11,7 @@ class SwatchesView {
 
     _init() {
         this._enable();
+        this._render();
     }
 
     _enable() {
@@ -29,6 +30,14 @@ class SwatchesView {
         const swatchList = this._controller.swatches;
 
         this._$swatchesContr.empty();
+
+        if (swatchList.length === 0) {
+            this._$swatchesContr.append(`
+                <li>There are currently no swatches to be displayed</li>
+            `);
+            return false;
+        }
+
         for (let i = 0; i < swatchList.length; i++) {
             const indvSwatch = swatchList[i];
 

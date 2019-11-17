@@ -11,8 +11,8 @@ class SwatchesController {
     // ------------------------------
 
     _init() {
-        this._view = new SwatchesView(this);
         this._model = new SwatchesModel();
+        this._view = new SwatchesView(this);
     }
 
     //
