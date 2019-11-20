@@ -1,46 +1,41 @@
 # Color Blocks - Solo Challenge(s)
 
-We will be building up an application that creates Color Blocks on the DOM based off of buttons that are loaded right away. Additionally, we are going to be tracking the number of Blocks in each color we create. When the user clicks on a color button, it will create a Color Block, then add to that colors count.
+## Description
 
-## Part 1: HTML/CSS
+The application is a JavaScript exercise that leverages jQuery for DOM manipulation with the goal of creating different Colored Blocks and adding them to the DOM based off of the specific button the user clicks. Additional features will be available for deleting the Colored Blocks and even altering their visual layout.
 
-### Assignment Objectives
+### Screen Shot
 
-- Practice Read and Write skills
-- Solidify HTML & CSS knowledge
-  - HTML elements, attributes
-  - using class and id
-  - Box Model and layout
+<img src="documentation/color-blocks-advanced.png" alt="Application Screenshot" />
 
-## Required Functionality
+## Prerequisites
 
-For the first part, we will be adding Color Blocks to the DOM using HTML & CSS. More specifically, create a Red, Yellow, Green, and Blue blocks when the application loads. They should be 100px in width, and 100px in height. They should have 10 px of space between each box.
+The following software is required to run this application.
 
-### Here is an example of what your application should look like after Part 1
+1. [Node.js](https://nodejs.org/en/)
 
-![Here is an example of what your application should look like after part 1](http://i.imgur.com/TRhp9w1.png)
+## Installation
 
+In the terminal from the root of the project directory run the following:
 
----
+1. `npm install`
+1. `npm start`
 
-## Part 2: jQuery
+This will launch the server at port 5000 so the application can be viewed at [localhost:5000](http://localhost:5000/).
 
-### Assignment Objectives
+## Usage
 
-- Practice Read and Write skills
-- Solidify jQuery knowledge
-  - Selectors
-  - Dynamic Content
-  - Methods `.on()`, `.append()`, `empty()`
+1. By clicking either the **Add Red**, **Add Blue**, **Add Green**, or **Add Yellow** buttons a *Color Block* element gets added to the page with the appropriate color displayed in the element.
+1. Each *Color Block* consists of three parts; a color swatch, a label with the name of the color, and a **Delete** button.
+1. When the **Delete** button on an individual *Color Block* is clicked it will remove that particular *Color Block* from the DOM.
+1. In the top right of the application to the right of the **Layout** label are five icons. Clicking on any of the icons will alter the layout of the *Color Blocks*. From left to right the icons are; auto, 1 across, 2 across, 3 across, & 4 across.
+    * **auto** - will inherit the size of the *Color Blocks* default size and wrap to the next line when there isn't enough room
+    * **1 across** - will cause each *Color Block* to fill up the entire available width so that only one *Color Block* fits on each line
+    * **2 across** - will size each *Color Block* so that only 2 can fit on a single line but fill up the entire available space
+    * **3 across** - will size each *Color Block* so that only 3 can fit on a single line but fill up the entire available space
+    * **3 across** - will size each *Color Block* so that only 4 can fit on a single line but fill up the entire available space
 
-## Required Functionality
+## Built With
 
-Add 4 buttons that read 'Red', 'Yellow', 'Green', and 'Blue'. When you click on those buttons, it should add a Color Block of that associated color to the DOM. Above the buttons, should be total counts for each colors relative to the number of times the button has been clicked, thus the total number of color blocks of that color.
-
-### Here is an example of what your application should look like after Part 2
-
-![Here is an example of what your application should look like after part 2](http://i.imgur.com/ChOIEjW.png)
-
-## Stretch Goals
-
-Make it so that when you click on one of the color blocks, it deletes that block, and then updates the color count. Create an input field that allows users to add multiple blocks at a time (e.g. 4 green blocks instead of just one).
+* JavaScript
+* Node.js
