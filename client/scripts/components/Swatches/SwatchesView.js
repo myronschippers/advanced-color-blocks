@@ -16,6 +16,7 @@ class SwatchesView {
 
     _enable() {
         this._$swatchesContr = $('.js-swatches-wall');
+        this._$colorCount = $('.js-color-count');
 
         this._createHandlers();
     }
@@ -28,6 +29,7 @@ class SwatchesView {
 
     _render() {
         const swatchList = this._controller.swatches;
+        let countDisplay = '0';
 
         this._$swatchesContr.empty();
 
@@ -36,6 +38,14 @@ class SwatchesView {
                 <li>There are currently no swatches to be displayed</li>
             `);
             return false;
+        } else {
+            const counts = this._controller.count;
+            countDisplay = `
+                <span class="pill">red: ${counts.red}</span> ,
+                <span class="pill">yellow: ${counts.yellow}</span> ,
+                <span class="pill">blue: ${counts.blue}</span> ,
+                <span class="pill">green: ${counts.green}</span>
+            `;
         }
 
         for (let i = 0; i < swatchList.length; i++) {
@@ -55,6 +65,9 @@ class SwatchesView {
                 </li>
             `);
         }
+
+        // adding the current count of colors to the DOM
+        this._$colorCount.html(countDisplay).addClass;
     }
 
     //
