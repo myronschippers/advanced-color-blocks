@@ -31,6 +31,15 @@ class SwatchesController {
     // GETTERS & SETTERS
     // ------------------------------
 
+    get count() {
+        return {
+            red: this._model.redCount,
+            yellow: this._model.yellowCount,
+            green: this._model.greenCount,
+            blue: this._model.blueCount,
+        }
+    }
+
     get swatches() {
         return this._model.swatches;
     }
